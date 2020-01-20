@@ -1,0 +1,272 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #141526;;
+    padding: 0;
+}
+/* Header Com Menu */
+.head h1{
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.head{
+    display: flex;
+    flex-direction: column;
+
+}
+.logo {
+    font-family: 'Fruktur', cursive;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: larger;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0.5rem;
+}
+
+.menu li a{
+    text-decoration: none;
+}
+
+.menublock{
+    display: flex;
+    flex-direction: column;
+    border: 1px;
+    background-color: #1cbfff;;
+    border-bottom: 1px solid #9193a8;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.menublock:hover{
+    border-bottom: 0px;
+}
+/* Fim do Header */
+/* Banner */
+.banner{
+    display: block;
+    height: 157px;
+    width: 280px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+    padding: 0;
+}
+
+.banner li{
+    list-style: none;
+    position: absolute;
+}
+
+.banner img{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+}
+
+.banner input{
+    display: none;
+}
+
+.banner label{
+    background-color: #1cbfff;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.banner li:nth-child(1) label{
+    left: 10px;
+}
+
+.banner li:nth-child(2) label{
+    left: 40px;
+}
+
+.banner li:nth-child(3) label{
+    left: 70px;
+}
+
+.banner img{
+    opacity: 0.5;
+    transition: opacity 1s;
+    will-change: opacity;
+    visibility: hidden;
+}
+
+.banner li input:checked ~ img{
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+/* Fim do Banner */
+/* Grid Animes */
+#center{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    margin: 25px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.itens a p{
+    margin: 0;
+    padding: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+.itens{
+    margin-right: 0;
+    margin-left: 0;
+}
+.itens a img{
+    transition: transform 1s;
+    will-change: scale;
+    padding: 20px;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.itens a{
+    width: 100%;
+    text-decoration: none;
+}
+.itens img:hover{
+    transform: scale(1.1);
+}
+/* Fim do Grid */
+/* Inicio Footer */
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+}
+.footer h3, p{
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.footer h3{
+    margin-top: 30px;
+}
+/* Fim do Footer */
+/* Responsividade */
+@media screen and (min-width: 350px) {
+    section{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (min-width: 480px) {
+    .banner{
+        height: 236px;
+        width: 420px;
+    }
+    .menu{
+        flex-direction: row;
+    }
+    section{
+        grid-template-columns: 1fr 1fr;
+    }
+    .menublock{
+        margin-right: .5rem;
+    }
+}
+@media screen and (min-width: 740px) {
+    .banner{
+        height: 281px;
+        width: 500px;
+    }
+    .head{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .head h1{
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .menu{
+        margin-top: 20px;
+    }
+    .menublock{
+        width: auto;
+        margin-right: 20px;
+        padding: .5rem;
+    }
+    section{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media screen and (min-width: 800px) {
+    .banner{
+        height: 365px;
+        width: 650px;
+    }
+    section{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (min-width: 1080px) {
+    .banner{
+        height: 438px;
+        width: 780px;
+    }
+    section{
+        grid-template-columns: repeat(5, 1fr);
+    }
+@media screen and (min-width: 1500px) {
+    .banner{
+        height: 540px;
+        width: 960px;
+    }
+    section{
+        grid-template-columns: repeat(6, 1fr);
+    }
+    .head{
+        justify-content: space-between;
+    }
+}
+@media screen and (min-width: 2000px) {
+    .banner{
+        height: 720px;
+        width: 1280px;
+    }
+    section{
+        grid-template-columns: repeat(7, 1fr);
+    }
+}
+@media screen and (min-width: 2160px) {
+    .banner{
+        height: 768px;
+        width: 1366px;
+    }
+    section{
+        grid-template-columns: repeat(8, 1fr);
+    }
+}
+@media screen and (min-width: 2560px) {
+    section{
+        grid-template-columns: repeat(9, 1fr);
+    }
+}
